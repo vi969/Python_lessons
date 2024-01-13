@@ -1,11 +1,13 @@
 import sys
-key = sys.argv[1]
-value = sys.argv[2]
-colors = {
-   "black": "черный",
-   "white": "белый",
-   "blue": "синий"
+
+# Формируем словарь.
+movie = {
+    "name": sys.argv[1],
+    "rating": float(sys.argv[2]),
+    "votes": int(sys.argv[3])
 }
 
+m_template = "{m[name]} ({m[rating]:.1f})"
 
-
+# Форматируем строку данными из словаря.
+print(m_template.format(m=movie))
